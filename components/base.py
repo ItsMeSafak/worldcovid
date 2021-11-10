@@ -1,4 +1,8 @@
 import streamlit as st
+from components.world_cases import main as world_cases_main
+from components.income_classes import main as income_classes_main
+from components.countries_cases import main as countries_cases_main
+
 
 def sidebar():
     # Global variables to check on plots
@@ -9,6 +13,10 @@ def sidebar():
 
     st.sidebar.header('Dashboard setings')
     st.header("Youboard")
+
+    world_cases_main()
+    income_classes_main()
+    countries_cases_main()
 
     # start_h, end_h = (date(1970, 2, 1), date.today())
 
