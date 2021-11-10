@@ -8,12 +8,12 @@ def sidebar():
     st.sidebar.header('Dashboard setings')
     st.header("World COVID dashboard")
 
-    # pages = {
-    #     "Map": components.laadpalen,
-    #     "1D Inspecties": components.ocm,
-    #     "2D Inspecties": components.rdw,
-    #     "Lineair model": components.rdw
-    # }
+    pages = {
+        "Map": "",
+        "1D Inspecties": "",
+        "2D Inspecties": "",
+        "Lineair model": ""
+    }
     st.sidebar.title("Navigatie")
     select = st.sidebar.selectbox(
         "Pagina",
