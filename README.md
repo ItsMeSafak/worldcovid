@@ -1,7 +1,7 @@
-# Youboard
+# World COVID dashboard
 Hello there! Welcome to the dashboard made by [Omwro](https://github.com/omwro) and me!
 
-*We are live: https://share.streamlit.io/itsmesafak/youboard/main.py
+*We are live: https://share.streamlit.io/itsmesafak/worldcovid/main.py
 
 ---
 ## Setup and installations
