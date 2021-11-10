@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import geopandas as gpd
-from datetime import date
 
 URL_COVID = "data/owid-covid-data.csv"
 URL_GEO = "data/countries.geojson"

@@ -14,7 +14,7 @@ def main():
                      trendline='ols',
                      trendline_color_override='red',
                      hover_data=['location'])
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)
 
     fig = px.scatter(df_countries,
                      x='date',
@@ -23,4 +23,4 @@ def main():
                      trendline='ols',
                      trendline_color_override='red',
                      hover_data=['location'])
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)

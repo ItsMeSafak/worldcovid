@@ -22,4 +22,4 @@ def main():
     fig.update_yaxes(title_text="Case count in Millions", secondary_y=False)
     fig.update_yaxes(title_text="Death count in Millions", secondary_y=True)
 
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)

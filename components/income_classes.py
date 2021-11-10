@@ -13,7 +13,7 @@ def main():
                      title='Total cases per income class',
                      color='location',
                      hover_data=['location'])
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)
 
     fig = px.scatter(df_income,
                      x='date',
@@ -21,4 +21,4 @@ def main():
                      title='Total deaths per income class',
                      color='location',
                      hover_data=['location'])
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)
