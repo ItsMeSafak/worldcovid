@@ -3,7 +3,7 @@ from components import base
 
 
 st.set_page_config(
-        page_title='Youboard',
+        page_title='World Covid',
         layout='wide',
         initial_sidebar_state="expanded"
     )
