@@ -1,12 +1,8 @@
 import streamlit as st
-from components.world_cases import main as world_cases_main
-from components.income_classes import main as income_classes_main
-from components.countries_cases import main as countries_cases_main
-from components.map import main as map
-from components.reproduction_rate import main as reproduction_rate_main
-from components.new_test_cases import main as new_test_cases_main
-from components.barplot import main as barplot
-
+import components.barplot
+import components.map
+import components.lines
+import components.lineair
 
 def sidebar():
     st.sidebar.header('Dashboard setings')
@@ -21,25 +17,17 @@ def sidebar():
     st.markdown("*Ook hebben we de countries geojson gebruikt, waarin geospatiale in verwerkt staat over heel de wereld. Deze dataset hebben wij gebruikt als een hulpmiddel voor de OWID Covid dataset. Dankzij de polygons die verwerkt staan in deze dataset hebben we de datasets gemerged op ISO code (bijvoorbeeld AUS = Australie) en zo hebben we geospatiale inspectie kunnen uitvoeren op de dataset.*")
 
     pages = {
-        "Map": "",
-        "1D Inspecties": "",
-        "2D Inspecties": "",
-        "Lineair model": ""
+        "Geospatiale Inspectie": components.map,
+        "Algemeen overzicht": components.barplot,
+        "Cases en stergevallen": components.lines,
+        "Lineair model": components.lineair
     }
     st.sidebar.title("Navigatie")
     select = st.sidebar.selectbox(
         "Pagina",
         pages.keys()
     )
-    # pages[select].main()
-
-    barplot()
-    world_cases_main()
-    income_classes_main()
-    countries_cases_main()
-    map()
-    reproduction_rate_main()
-    new_test_cases_main()
+    pages[select].main()
 
     st.sidebar.markdown('[README.md](https://github.com/ItsMeSafak/youboard/blob/master/README.md)')
 
