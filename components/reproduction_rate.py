@@ -15,6 +15,8 @@ def main():
 
     df_world_filtered = df_world[df_world['monthyear'] == selected_monthyear]
 
-    fig = px.box(df_world_filtered, y="reproduction_rate", title="Boxplot gemiddelde reproductie getal over de wered")
+    fig = px.box(df_world_filtered,
+                 y="reproduction_rate",
+                 title="Boxplot gemiddelde reproductie getal over de wereld")
     fig.update_layout(yaxis_title="Reproductie getal")
     st.plotly_chart(fig, use_container_width=True)
