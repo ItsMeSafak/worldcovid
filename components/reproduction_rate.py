@@ -17,4 +17,4 @@ def main():
 
     fig = px.box(df_world_filtered, y="reproduction_rate", title="Boxplot gemiddelde reproductie getal over de wered")
     fig.update_layout(yaxis_title="Reproductie getal")
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)
